@@ -1,0 +1,18 @@
+from qgis.core import *
+import os
+
+QML_file = ('*.qml')#insert path to qml file 
+
+
+def applystyle_group(name):
+    root = QgsProject.instance().layerTreeRoot()
+    point = root.findGroup(name) #Find Group
+    for child in point.children():
+        if isinstance(child, QgsLayerTreeLayer):
+            if child.layer().type()==0:
+                child.layer().loadNamedStyle(QML_file)
+                
+try: #If group is not present this will keep script running if you want to add more
+    applystyle_group("*")#insert name of QGIS group or subgroup
+except Exception:
+    pass
