@@ -13,6 +13,6 @@ def applystyle_group(name):
                 child.layer().loadNamedStyle(QML_file)
                 
 try: #If group is not present this will keep script running if you want to add more
-    applystyle_group("*")#insert name of QGIS group or subgroup
+    applystyle_group("*")#insert name of QGIS group
 except Exception:
     pass
