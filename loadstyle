@@ -2,7 +2,7 @@ from qgis.core import *
 import os
 #copy line 9-21 and change file names and group names if you have more groups
 
-QML_file = ('*.qml')#insert path to qml file 
+QML_file = ('yourqmlfile.qml')#insert path to qml file 
 #add other qml files if you want to change style for more groups
 
 
